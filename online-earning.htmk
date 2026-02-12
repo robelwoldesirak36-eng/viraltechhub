@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Online Earning Strategies</title>
+<style>
+body { font-family: Arial, sans-serif; line-height: 1.6; max-width: 800px; margin: auto; padding: 20px; background: #f5f5f5; }
+header, footer { text-align: center; padding: 20px; background: #111; color: white; }
+img { max-width: 100%; margin: 10px 0; border-radius: 5px; }
+a { color: #111; text-decoration: none; }
+a:hover { text-decoration: underline; }
+</style>
+</head>
+<body>
+
+<header>
+<h1>Online Earning Strategies</h1>
+<a href="index.html">← Back to Home</a>
+</header>
+
+<main>
+<img src="https://images.unsplash.com/photo-1590608897129-79c41e8f8990" alt="Online Earning">
+<p>Making money online is possible with the right strategies:</p>
+
+<h2>1. Freelancing</h2>
+<p>Offer skills like writing, design, coding, or social media management on platforms like Fiverr or Upwork.</p>
+
+<h2>2. Content Creation</h2>
+<p>Start a YouTube channel, blog, or TikTok. Monetize with ads, sponsorships, or affiliate marketing.</p>
+
+<h2>3. AI-Assisted Work</h2>
+<p>Use AI tools to generate content, designs, or automate tasks and save time.</p>
+
+<h2>4. Online Courses & Ebooks</h2>
+<p>Create educational content and sell to students worldwide.</p>
+
+<p>Consistency and learning from experience are the keys to success in online earning.</p>
+</main>
+
+<footer>
+<p>© 2026 AI & Viral Tech Hub</p>
+</footer>
+
+</body>
+</html>
