@@ -3,126 +3,169 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AI & Viral Tech Hub</title>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+<title>AI & Viral Tech Hub | Trending AI & Tech Guides</title>
+<meta name="description" content="Explore trending AI tools, phone hacks, Chrome tricks, cybersecurity tips and online income strategies.">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
 <style>
-/* Base Styles */
-body, h1, h2, h3, p, ul, li { margin: 0; padding: 0; font-family: 'Poppins', sans-serif; }
-body { line-height: 1.6; background: #f4f7f9; color: #333; }
-a { text-decoration: none; color: inherit; }
+* { margin:0; padding:0; box-sizing:border-box; font-family:'Poppins', sans-serif; }
+body { background:#f4f7fb; color:#333; }
 
-/* Header / Hero Banner */
-header.hero {
-  background: url('https://images.unsplash.com/photo-1581091215367-ef53d5e3179b?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
-  color: #fff;
-  text-align: center;
-  padding: 120px 20px 80px;
-  position: relative;
+/* HERO */
+.hero {
+  background: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)),
+              url('https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1600&q=80') center/cover;
+  color:white;
+  text-align:center;
+  padding:140px 20px;
 }
-header.hero h1 { font-size: 48px; margin-bottom: 15px; }
-header.hero p { font-size: 22px; color: #f0f0f0; margin-bottom: 20px; }
-header.hero a.cta { background: #e94560; padding: 12px 30px; border-radius: 25px; color: white; font-weight: 600; transition: 0.3s; }
-header.hero a.cta:hover { background: #d12c47; }
 
-/* Navigation */
-nav { display: flex; justify-content: center; background: #1f4068; padding: 12px 0; flex-wrap: wrap; }
-nav a { color: #fff; margin: 0 15px; font-weight: 600; transition: 0.3s; }
-nav a:hover { color: #e94560; }
+.hero h1 { font-size:48px; font-weight:700; }
+.hero p { font-size:20px; margin:20px 0; color:#ddd; }
 
-/* Featured Section */
-.featured-section { max-width: 1200px; margin: -60px auto 40px; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px,1fr)); gap: 30px; padding: 0 20px; }
-.featured-card { background: #fff; border-radius: 15px; overflow: hidden; box-shadow: 0 8px 20px rgba(0,0,0,0.1); transition: transform 0.3s; }
-.featured-card:hover { transform: translateY(-5px); }
-.featured-card img { width: 100%; height: 200px; object-fit: cover; }
-.featured-card h2 { padding: 15px; font-size: 22px; color: #162447; }
-.featured-card p { padding: 0 15px 15px; color: #555; font-size: 15px; }
+.hero a {
+  background:#e94560;
+  padding:14px 30px;
+  border-radius:30px;
+  color:white;
+  font-weight:600;
+  display:inline-block;
+  transition:0.3s;
+}
+.hero a:hover { background:#d72f4a; }
 
-/* Categories */
-.categories { max-width: 1200px; margin: 50px auto; display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; padding: 0 20px; }
-.category-btn { background: #1f4068; color: #fff; padding: 10px 20px; border-radius: 25px; font-weight: 600; transition: 0.3s; }
-.category-btn:hover { background: #e94560; }
+/* NAV */
+nav {
+  background:#162447;
+  padding:15px;
+  text-align:center;
+}
+nav a {
+  color:white;
+  margin:0 15px;
+  font-weight:600;
+}
 
-/* Latest Articles Grid */
-.latest-articles { max-width: 1200px; margin: 50px auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(280px,1fr)); gap: 30px; padding: 0 20px; }
-.article-card { background: #fff; border-radius: 12px; overflow: hidden; box-shadow: 0 6px 18px rgba(0,0,0,0.08); transition: transform 0.3s; }
-.article-card:hover { transform: translateY(-5px); }
-.article-card img { width: 100%; height: 180px; object-fit: cover; }
-.article-card h2 { padding: 15px 15px 5px; color: #162447; font-size: 18px; }
-.article-card p { padding: 0 15px 15px; font-size: 14px; color: #555; }
+/* CATEGORY BUTTONS */
+.categories {
+  text-align:center;
+  margin:40px 0;
+}
+.categories button {
+  background:#1f4068;
+  color:white;
+  border:none;
+  padding:10px 20px;
+  border-radius:25px;
+  margin:5px;
+  cursor:pointer;
+  font-weight:600;
+}
+.categories button:hover { background:#e94560; }
 
-/* Footer */
-footer { text-align: center; padding: 30px 20px; background: #1a1a2e; color: #fff; margin-top: 50px; }
+/* ARTICLE GRID */
+.grid {
+  max-width:1200px;
+  margin:40px auto;
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));
+  gap:30px;
+  padding:0 20px;
+}
 
-/* Responsive */
-@media screen and (max-width:600px){ nav { flex-direction: column; } nav a { margin:10px 0; } .featured-card img, .article-card img { height: 150px; } }
+.card {
+  background:white;
+  border-radius:15px;
+  overflow:hidden;
+  box-shadow:0 10px 25px rgba(0,0,0,0.08);
+  transition:0.3s;
+}
+.card:hover { transform:translateY(-5px); }
+
+.card img {
+  width:100%;
+  height:180px;
+  object-fit:cover;
+}
+
+.card h2 {
+  font-size:18px;
+  padding:15px;
+  color:#162447;
+}
+
+footer {
+  background:#162447;
+  color:white;
+  text-align:center;
+  padding:30px;
+  margin-top:50px;
+}
 </style>
 </head>
+
 <body>
 
-<header class="hero">
+<section class="hero">
 <h1>AI & Viral Tech Hub</h1>
-<p>Trending AI Tools, Chrome Tricks, Phone Hacks & Online Earning Guides</p>
-<a href="#latest-articles" class="cta">Explore Articles</a>
-</header>
+<p>Trending AI Tools, Tech Hacks & Online Income Strategies</p>
+<a href="#articles">Explore Articles</a>
+</section>
 
 <nav>
 <a href="index.html">Home</a>
 <a href="about.html">About</a>
-<a href="privacy.html">Privacy</a>
 <a href="contact.html">Contact</a>
-<a href="terms.html">Terms</a>
 </nav>
 
-<!-- Featured Articles -->
-<section class="featured-section">
-<div class="featured-card">
-<img src="https://images.unsplash.com/photo-1607746882042-944635dfe10e" alt="AI Productivity">
-<h2><a href="article5.html">AI Productivity Tools</a></h2>
-<p>Learn how AI can automate tasks, improve efficiency, and make your workday smarter.</p>
-</div>
-<div class="featured-card">
-<img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f" alt="Social Media">
-<h2><a href="article6.html">Social Media Growth Hacks</a></h2>
-<p>Proven strategies and AI tools to grow your social media audience faster.</p>
-</div>
-<div class="featured-card">
-<img src="https://images.unsplash.com/photo-1581091012184-4d0cb9f7597a" alt="AI Business">
-<h2><a href="article7.html">Future of AI in Business</a></h2>
-<p>Explore how AI is transforming industries and shaping the corporate world.</p>
-</div>
-</section>
-
-<!-- Categories -->
 <div class="categories">
-<a href="index.html#ai-tools" class="category-btn">AI Tools</a>
-<a href="index.html#chrome-tricks" class="category-btn">Chrome Tricks</a>
-<a href="index.html#phone-hacks" class="category-btn">Phone Hacks</a>
-<a href="index.html#online-earning" class="category-btn">Online Income</a>
+<button onclick="filterCategory('all')">All</button>
+<button onclick="filterCategory('ai')">AI Tools</button>
+<button onclick="filterCategory('phone')">Phone Hacks</button>
+<button onclick="filterCategory('income')">Online Income</button>
+<button onclick="filterCategory('security')">Cybersecurity</button>
 </div>
 
-<!-- Latest Articles -->
-<section class="latest-articles" id="latest-articles">
-<div class="article-card">
-<img src="https://images.unsplash.com/photo-1612831455547-9c3a4524b4cd" alt="AI in Education">
-<h2><a href="article8.html">AI in Education</a></h2>
-<p>Discover AI-powered learning tools that personalize education and enhance productivity.</p>
+<section class="grid" id="articles">
+
+<!-- Example Article Card -->
+<div class="card ai">
+<img src="https://images.unsplash.com/photo-1607746882042-944635dfe10e">
+<h2><a href="article1.html">Top AI Productivity Tools</a></h2>
 </div>
-<div class="article-card">
-<img src="https://images.unsplash.com/photo-1590608897129-79c41e8f8990" alt="Cybersecurity">
-<h2><a href="article9.html">Cybersecurity Tips for 2026</a></h2>
-<p>Protect yourself from emerging online threats with AI-assisted security tools and strategies.</p>
+
+<div class="card phone">
+<img src="https://images.unsplash.com/photo-1523475496153-3b38fda0d04b">
+<h2><a href="article2.html">Hidden Phone Hacks</a></h2>
 </div>
-<div class="article-card">
-<img src="https://images.unsplash.com/photo-1612831455547-9c3a4524b4cd" alt="Future Tech">
-<h2><a href="article10.html">Future Tech Trends</a></h2>
-<p>Stay ahead by learning about cutting-edge technology trends shaping 2026 and beyond.</p>
+
+<div class="card income">
+<img src="https://images.unsplash.com/photo-1590608897129-79c41e8f8990">
+<h2><a href="article3.html">Online Income in 2026</a></h2>
 </div>
-<!-- Add remaining articles similarly -->
+
+<!-- Add remaining article cards same format up to article20 -->
+
 </section>
 
 <footer>
-<p>© 2026 AI & Viral Tech Hub</p>
+© 2026 AI & Viral Tech Hub
 </footer>
+
+<script>
+function filterCategory(category) {
+  const cards = document.querySelectorAll(".card");
+  cards.forEach(card => {
+    if (category === "all" || card.classList.contains(category)) {
+      card.style.display = "block";
+    } else {
+      card.style.display = "none";
+    }
+  });
+}
+</script>
 
 </body>
 </html>
