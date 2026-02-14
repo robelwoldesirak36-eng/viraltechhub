@@ -3,169 +3,240 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>AI & Viral Tech Hub | Trending AI & Tech Guides</title>
-<meta name="description" content="Explore trending AI tools, phone hacks, Chrome tricks, cybersecurity tips and online income strategies.">
+<title>AI & Viral Tech Hub</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 
 <style>
-* { margin:0; padding:0; box-sizing:border-box; font-family:'Poppins', sans-serif; }
-body { background:#f4f7fb; color:#333; }
+*{margin:0;padding:0;box-sizing:border-box}
+body{
+  font-family:'Poppins',sans-serif;
+  background:#f4f7fb;
+  color:#222;
+}
+
+/* NAVBAR */
+nav{
+  background:#0f172a;
+  color:white;
+  padding:15px 40px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+nav h2{font-weight:700}
+nav a{
+  color:white;
+  text-decoration:none;
+  margin-left:20px;
+  font-weight:500;
+}
 
 /* HERO */
-.hero {
-  background: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)),
-              url('https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1600&q=80') center/cover;
+.hero{
+  background:linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.65)),
+  url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1600&q=80')
+  center/cover no-repeat;
   color:white;
   text-align:center;
-  padding:140px 20px;
+  padding:120px 20px;
 }
-
-.hero h1 { font-size:48px; font-weight:700; }
-.hero p { font-size:20px; margin:20px 0; color:#ddd; }
-
-.hero a {
-  background:#e94560;
-  padding:14px 30px;
-  border-radius:30px;
-  color:white;
-  font-weight:600;
-  display:inline-block;
-  transition:0.3s;
+.hero h1{
+  font-size:42px;
+  margin-bottom:20px;
 }
-.hero a:hover { background:#d72f4a; }
-
-/* NAV */
-nav {
-  background:#162447;
-  padding:15px;
-  text-align:center;
-}
-nav a {
-  color:white;
-  margin:0 15px;
-  font-weight:600;
+.hero p{
+  font-size:18px;
+  opacity:.9;
 }
 
 /* CATEGORY BUTTONS */
-.categories {
+.categories{
   text-align:center;
   margin:40px 0;
 }
-.categories button {
-  background:#1f4068;
-  color:white;
-  border:none;
+.categories button{
   padding:10px 20px;
+  border:none;
   border-radius:25px;
-  margin:5px;
+  margin:10px;
   cursor:pointer;
-  font-weight:600;
+  background:#0f172a;
+  color:white;
+  transition:.3s;
 }
-.categories button:hover { background:#e94560; }
+.categories button:hover{
+  background:#e94560;
+}
 
-/* ARTICLE GRID */
-.grid {
-  max-width:1200px;
-  margin:40px auto;
+/* GRID */
+.grid{
   display:grid;
-  grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));
-  gap:30px;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:25px;
+  max-width:1200px;
+  margin:0 auto 60px;
   padding:0 20px;
 }
 
-.card {
+.card{
   background:white;
   border-radius:15px;
   overflow:hidden;
-  box-shadow:0 10px 25px rgba(0,0,0,0.08);
-  transition:0.3s;
+  box-shadow:0 8px 20px rgba(0,0,0,.08);
+  transition:.3s;
 }
-.card:hover { transform:translateY(-5px); }
-
-.card img {
+.card:hover{
+  transform:translateY(-5px);
+}
+.card img{
   width:100%;
   height:180px;
   object-fit:cover;
 }
-
-.card h2 {
+.card-content{
+  padding:20px;
+}
+.card-content h3{
+  margin-bottom:10px;
   font-size:18px;
-  padding:15px;
-  color:#162447;
+}
+.card-content a{
+  text-decoration:none;
+  color:#e94560;
+  font-weight:600;
 }
 
-footer {
-  background:#162447;
+/* FOOTER */
+footer{
+  background:#0f172a;
   color:white;
   text-align:center;
   padding:30px;
-  margin-top:50px;
 }
 </style>
-</head>
-
-<body>
-
-<section class="hero">
-<h1>AI & Viral Tech Hub</h1>
-<p>Trending AI Tools, Tech Hacks & Online Income Strategies</p>
-<a href="#articles">Explore Articles</a>
-</section>
-
-<nav>
-<a href="index.html">Home</a>
-<a href="about.html">About</a>
-<a href="contact.html">Contact</a>
-</nav>
-
-<div class="categories">
-<button onclick="filterCategory('all')">All</button>
-<button onclick="filterCategory('ai')">AI Tools</button>
-<button onclick="filterCategory('phone')">Phone Hacks</button>
-<button onclick="filterCategory('income')">Online Income</button>
-<button onclick="filterCategory('security')">Cybersecurity</button>
-</div>
-
-<section class="grid" id="articles">
-
-<!-- Example Article Card -->
-<div class="card ai">
-<img src="https://images.unsplash.com/photo-1607746882042-944635dfe10e">
-<h2><a href="article1.html">Top AI Productivity Tools</a></h2>
-</div>
-
-<div class="card phone">
-<img src="https://images.unsplash.com/photo-1523475496153-3b38fda0d04b">
-<h2><a href="article2.html">Hidden Phone Hacks</a></h2>
-</div>
-
-<div class="card income">
-<img src="https://images.unsplash.com/photo-1590608897129-79c41e8f8990">
-<h2><a href="article3.html">Online Income in 2026</a></h2>
-</div>
-
-<!-- Add remaining article cards same format up to article20 -->
-
-</section>
-
-<footer>
-© 2026 AI & Viral Tech Hub
-</footer>
 
 <script>
-function filterCategory(category) {
-  const cards = document.querySelectorAll(".card");
-  cards.forEach(card => {
-    if (category === "all" || card.classList.contains(category)) {
-      card.style.display = "block";
-    } else {
-      card.style.display = "none";
+function filterCategory(category){
+  const cards=document.querySelectorAll('.card');
+  cards.forEach(card=>{
+    if(category==="all"){
+      card.style.display="block";
+    }else{
+      if(card.classList.contains(category)){
+        card.style.display="block";
+      }else{
+        card.style.display="none";
+      }
     }
   });
 }
 </script>
+
+</head>
+<body>
+
+<nav>
+<h2>AI & Viral Tech Hub</h2>
+<div>
+<a href="#">Home</a>
+<a href="#">About</a>
+<a href="#">Contact</a>
+</div>
+</nav>
+
+<section class="hero">
+<h1>Future Technology & AI Insights</h1>
+<p>Explore powerful AI tools, online income strategies, digital skills, and future tech trends.</p>
+</section>
+
+<section class="categories">
+<button onclick="filterCategory('all')">All</button>
+<button onclick="filterCategory('ai')">AI</button>
+<button onclick="filterCategory('tech')">Technology</button>
+<button onclick="filterCategory('income')">Income</button>
+</section>
+
+<section class="grid">
+
+<!-- AI ARTICLES -->
+<div class="card ai">
+<img src="https://images.unsplash.com/photo-1677442136019-21780ecad995">
+<div class="card-content">
+<h3>Top AI Productivity Tools</h3>
+<a href="article1.html">Read More →</a>
+</div>
+</div>
+
+<div class="card tech">
+<img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758">
+<div class="card-content">
+<h3>Chrome Power Tricks</h3>
+<a href="article2.html">Read More →</a>
+</div>
+</div>
+
+<div class="card tech">
+<img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9">
+<div class="card-content">
+<h3>Android Phone Hacks</h3>
+<a href="article3.html">Read More →</a>
+</div>
+</div>
+
+<div class="card income">
+<img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f">
+<div class="card-content">
+<h3>Making Money Online</h3>
+<a href="article4.html">Read More →</a>
+</div>
+</div>
+
+<!-- CONTINUE CARDS -->
+
+<div class="card ai"><img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644"><div class="card-content"><h3>AI Tools for Students</h3><a href="article5.html">Read More →</a></div></div>
+
+<div class="card tech"><img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b"><div class="card-content"><h3>Cybersecurity Tips</h3><a href="article6.html">Read More →</a></div></div>
+
+<div class="card tech"><img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa"><div class="card-content"><h3>Future Tech 2030</h3><a href="article7.html">Read More →</a></div></div>
+
+<div class="card income"><img src="https://images.unsplash.com/photo-1611162617474-5b21e879e113"><div class="card-content"><h3>Social Media Growth</h3><a href="article8.html">Read More →</a></div></div>
+
+<div class="card ai"><img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0"><div class="card-content"><h3>AI for Designers</h3><a href="article9.html">Read More →</a></div></div>
+
+<div class="card tech"><img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d"><div class="card-content"><h3>Remote Work Setup</h3><a href="article10.html">Read More →</a></div></div>
+
+<div class="card tech"><img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d"><div class="card-content"><h3>Cloud Computing Guide</h3><a href="article11.html">Read More →</a></div></div>
+
+<div class="card ai"><img src="https://images.unsplash.com/photo-1535223289827-42f1e9919769"><div class="card-content"><h3>AI & Jobs</h3><a href="article12.html">Read More →</a></div></div>
+
+<div class="card tech"><img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9"><div class="card-content"><h3>Phone Security</h3><a href="article13.html">Read More →</a></div></div>
+
+<div class="card tech"><img src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4"><div class="card-content"><h3>Programming Languages</h3><a href="article14.html">Read More →</a></div></div>
+
+<div class="card income"><img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f"><div class="card-content"><h3>Digital Marketing</h3><a href="article15.html">Read More →</a></div></div>
+
+<div class="card income"><img src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43"><div class="card-content"><h3>Passive Income</h3><a href="article16.html">Read More →</a></div></div>
+
+<div class="card ai"><img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d"><div class="card-content"><h3>AI Content Creation</h3><a href="article17.html">Read More →</a></div></div>
+
+<div class="card income"><img src="https://images.unsplash.com/photo-1492724441997-5dc865305da7"><div class="card-content"><h3>Productivity Habits</h3><a href="article18.html">Read More →</a></div></div>
+
+<div class="card tech"><img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c"><div class="card-content"><h3>Startup Ideas</h3><a href="article19.html">Read More →</a></div></div>
+
+<div class="card ai"><img src="https://images.unsplash.com/photo-1677442136019-21780ecad995"><div class="card-content"><h3>Future of AI</h3><a href="article20.html">Read More →</a></div></div>
+
+</section>
+<footer style="background:#0f172a;color:white;text-align:center;padding:30px;">
+<p>© 2026 AI & Viral Tech Hub | All Rights Reserved</p>
+<p>
+<a href="about.html" style="color:white;margin:0 10px;text-decoration:none;">About</a>|
+<a href="contact.html" style="color:white;margin:0 10px;text-decoration:none;">Contact</a>|
+<a href="privacy.html" style="color:white;margin:0 10px;text-decoration:none;">Privacy Policy</a>|
+<a href="terms.html" style="color:white;margin:0 10px;text-decoration:none;">Terms & Conditions</a>
+</p>
+</footer>
+
 
 </body>
 </html>
