@@ -5,53 +5,151 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Contact | AI & Viral Tech Hub</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 
 <style>
+*{margin:0;padding:0;box-sizing:border-box}
+
 body{
 font-family:'Poppins',sans-serif;
 background:#f4f7fb;
-margin:0;
+color:#222;
 }
 
-.container{
-max-width:600px;
+/* NAVBAR */
+nav{
+background:#0f172a;
+padding:18px 40px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+nav h2{
+color:white;
+font-size:20px;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+margin-left:20px;
+font-weight:500;
+transition:.3s;
+}
+
+nav a:hover{
+color:#ff4d6d;
+}
+
+/* MAIN CONTAINER */
+.wrapper{
+max-width:1000px;
 margin:60px auto;
+padding:20px;
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:40px;
+}
+
+/* LEFT INFO SECTION */
+.contact-info{
 background:white;
 padding:40px;
 border-radius:15px;
-box-shadow:0 10px 30px rgba(0,0,0,0.1);
+box-shadow:0 10px 30px rgba(0,0,0,0.08);
 }
 
-h1{text-align:center;margin-bottom:20px;}
+.contact-info h2{
+margin-bottom:20px;
+}
+
+.contact-info p{
+margin-bottom:15px;
+line-height:1.6;
+}
+
+.contact-info strong{
+color:#0f172a;
+}
+
+/* FORM SECTION */
+.form-container{
+background:white;
+padding:40px;
+border-radius:15px;
+box-shadow:0 10px 30px rgba(0,0,0,0.08);
+}
+
+.form-container h2{
+margin-bottom:20px;
+}
 
 input, textarea{
 width:100%;
-padding:12px;
-margin:10px 0;
+padding:14px;
+margin:12px 0;
 border-radius:8px;
 border:1px solid #ccc;
+font-size:14px;
+}
+
+input:focus, textarea:focus{
+outline:none;
+border-color:#0f172a;
 }
 
 button{
-background:#162447;
+background:#0f172a;
 color:white;
-padding:12px 25px;
+padding:14px 30px;
 border:none;
 border-radius:8px;
 cursor:pointer;
 font-size:16px;
+transition:.3s;
 }
 
 button:hover{
-background:#1f4068;
+background:#e94560;
 }
 
 .success{
 color:green;
-text-align:center;
 margin-top:15px;
 display:none;
+}
+
+.error{
+color:red;
+margin-top:15px;
+display:none;
+}
+
+/* FOOTER */
+footer{
+background:#0f172a;
+color:white;
+text-align:center;
+padding:30px;
+margin-top:60px;
+}
+
+footer a{
+color:white;
+text-decoration:none;
+margin:0 10px;
+}
+
+footer a:hover{
+color:#ff4d6d;
+}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+.wrapper{
+grid-template-columns:1fr;
+}
 }
 </style>
 
@@ -59,22 +157,25 @@ display:none;
 
 <script>
 (function(){
-emailjs.init("8W1jW2-GcMXH7_qC1");   // YOUR PUBLIC KEY
+emailjs.init("8W1jW2-GcMXH7_qC1"); 
 })();
 
 function sendMail(e){
 e.preventDefault();
 
+document.getElementById("success").style.display="none";
+document.getElementById("error").style.display="none";
+
 emailjs.sendForm(
-"service_tx2num4",      // SERVICE ID
-"template_kccezxx",     // TEMPLATE ID
-document.getElementById("contact-form")  // FORM
+"service_tx2num4",
+"template_kccezxx",
+document.getElementById("contact-form")
 )
 .then(function(){
 document.getElementById("success").style.display="block";
 document.getElementById("contact-form").reset();
-}, function(error){
-alert("Failed to send message. Check EmailJS settings.");
+}, function(){
+document.getElementById("error").style.display="block";
 });
 }
 </script>
@@ -82,19 +183,53 @@ alert("Failed to send message. Check EmailJS settings.");
 
 <body>
 
-<div class="container">
-<h1>Contact Us</h1>
+<!-- NAVIGATION -->
+<nav>
+<h2>AI & Viral Tech Hub</h2>
+<div>
+<a href="/viraltechhub/index.html">Home</a>
+<a href="/viraltechhub/about.html">About</a>
+<a href="/viraltechhub/contact.html">Contact</a>
+</div>
+</nav>
+
+<div class="wrapper">
+
+<!-- LEFT SIDE INFO -->
+<div class="contact-info">
+<h2>Get In Touch</h2>
+<p>If you have questions, suggestions, partnership requests, or business inquiries, feel free to contact us using the form.</p>
+
+<p><strong>Email:</strong> yourname@email.com</p>
+<p><strong>Website:</strong> AI & Viral Tech Hub</p>
+<p>We usually respond within 24–48 hours.</p>
+</div>
+
+<!-- RIGHT SIDE FORM -->
+<div class="form-container">
+<h2>Send Message</h2>
 
 <form id="contact-form" onsubmit="sendMail(event)">
 <input type="text" name="name" placeholder="Your Name" required>
 <input type="email" name="email" placeholder="Your Email" required>
-<textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+<textarea name="message" rows="6" placeholder="Your Message" required></textarea>
 <button type="submit">Send Message</button>
 </form>
 
 <p id="success" class="success">Message sent successfully!</p>
+<p id="error" class="error">Failed to send message. Please try again.</p>
 
 </div>
+
+</div>
+
+<footer>
+<p>© 2026 AI & Viral Tech Hub | All Rights Reserved</p>
+<p>
+<a href="/viraltechhub/privacy.html">Privacy Policy</a> |
+<a href="/viraltechhub/terms.html">Terms & Conditions</a>
+</p>
+</footer>
 
 </body>
 </html>
