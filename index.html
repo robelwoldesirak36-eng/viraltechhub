@@ -4,21 +4,134 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>AI & Viral Tech Hub | Home</title>
+
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 
 <!-- Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-7J6CGH5MQG"></script>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-7J6CGH5MQG');
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-7J6CGH5MQG');
 </script>
 
 <style>
-/* --- Your existing CSS here --- */
+body{
+font-family:Poppins, sans-serif;
+margin:0;
+background:#f4f7fb;
+}
+
+/* NAVBAR */
+nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+background:#162447;
+color:white;
+padding:15px 40px;
+}
+
+nav a{
+color:white;
+margin-left:20px;
+text-decoration:none;
+font-weight:600;
+}
+
+/* HERO */
+.hero{
+background:linear-gradient(to right,#1f4068,#162447);
+color:white;
+text-align:center;
+padding:60px 20px;
+}
+
+.hero h1{font-size:40px;margin-bottom:10px}
+
+/* LAYOUT */
+.main-container{
+display:flex;
+max-width:1200px;
+margin:40px auto;
+gap:25px;
+}
+
+/* ARTICLE GRID */
+.article-grid{
+flex:3;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:20px;
+}
+
+.card{
+background:white;
+border-radius:12px;
+box-shadow:0 5px 20px rgba(0,0,0,0.08);
+overflow:hidden;
+}
+
+.card img{
+width:100%;
+height:180px;
+object-fit:cover;
+}
+
+.card-content{
+padding:15px;
+}
+
+.card-content h3{
+margin:0 0 10px;
+}
+
+.card-content a{
+color:#1f4068;
+font-weight:bold;
+text-decoration:none;
+}
+
+/* SIDEBAR */
+.sidebar{
+flex:1;
+background:white;
+padding:20px;
+border-radius:12px;
+box-shadow:0 5px 20px rgba(0,0,0,0.08);
+}
+
+.sidebar h3{
+border-bottom:2px solid #eee;
+padding-bottom:8px;
+}
+
+.sidebar ul{
+list-style:none;
+padding:0;
+}
+
+.sidebar ul li{
+margin:10px 0;
+}
+
+.sidebar ul li a{
+text-decoration:none;
+color:#162447;
+}
+
+/* FOOTER */
+footer{
+background:#162447;
+color:white;
+text-align:center;
+padding:20px;
+margin-top:40px;
+}
 </style>
 </head>
+
 <body>
 
 <nav>
@@ -34,16 +147,46 @@
 
 <section class="hero">
 <h1>Discover the Future of AI & Technology</h1>
-<p>Latest AI tools, online income tips, and tech innovations at your fingertips.</p>
+<p>Latest AI tools, online income tips, and tech innovations.</p>
 </section>
 
 <div class="main-container">
+
 <div class="article-grid">
-<!-- Articles 1-20 -->
-<div class="card"><img src="https://images.unsplash.com/photo-1677442136019-21780ecad995"><div class="card-content"><h3>Top AI Productivity Tools</h3><a href="article1.html">Read More →</a></div></div>
-<div class="card"><img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758"><div class="card-content"><h3>Hidden Chrome Tricks</h3><a href="article2.html">Read More →</a></div></div>
-<!-- ... continue all 20 articles ... -->
-<div class="card"><img src="https://images.unsplash.com/photo-1677442136019-21780ecad995"><div class="card-content"><h3>Future of Artificial Intelligence</h3><a href="article20.html">Read More →</a></div></div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1677442136019-21780ecad995">
+<div class="card-content">
+<h3>Top AI Productivity Tools</h3>
+<a href="article1.html">Read More →</a>
+</div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758">
+<div class="card-content">
+<h3>Hidden Chrome Tricks</h3>
+<a href="article2.html">Read More →</a>
+</div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1518779578993-ec3579fee39f">
+<div class="card-content">
+<h3>Secret Android Hacks</h3>
+<a href="article3.html">Read More →</a>
+</div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1526378722484-bd91ca387e72">
+<div class="card-content">
+<h3>Making Money Online</h3>
+<a href="article4.html">Read More →</a>
+</div>
+</div>
+
+<!-- Continue until article20.html -->
 </div>
 
 <div class="sidebar">
@@ -65,16 +208,11 @@
 <li><a href="article10.html">Remote Work Setup</a></li>
 </ul>
 </div>
+
 </div>
 
 <footer>
-<p>© 2026 AI & Viral Tech Hub | All Rights Reserved</p>
-<p>
-<a href="about.html">About</a>|
-<a href="contact.html">Contact</a>|
-<a href="privacy.html">Privacy Policy</a>|
-<a href="terms.html">Terms & Conditions</a>
-</p>
+<p>© 2026 AI & Viral Tech Hub</p>
 </footer>
 
 </body>
