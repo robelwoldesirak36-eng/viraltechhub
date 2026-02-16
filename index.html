@@ -31,6 +31,7 @@ align-items:center;
 background:#162447;
 color:white;
 padding:15px 40px;
+flex-wrap:wrap;
 }
 
 nav a{
@@ -56,6 +57,8 @@ display:flex;
 max-width:1200px;
 margin:40px auto;
 gap:25px;
+padding:0 15px;
+flex-wrap:wrap;
 }
 
 /* ARTICLE GRID */
@@ -71,6 +74,11 @@ background:white;
 border-radius:12px;
 box-shadow:0 5px 20px rgba(0,0,0,0.08);
 overflow:hidden;
+transition:0.3s;
+}
+
+.card:hover{
+transform:translateY(-5px);
 }
 
 .card img{
@@ -100,6 +108,7 @@ background:white;
 padding:20px;
 border-radius:12px;
 box-shadow:0 5px 20px rgba(0,0,0,0.08);
+min-width:250px;
 }
 
 .sidebar h3{
@@ -129,6 +138,13 @@ text-align:center;
 padding:20px;
 margin-top:40px;
 }
+
+/* MOBILE */
+@media(max-width:768px){
+.main-container{
+flex-direction:column;
+}
+}
 </style>
 </head>
 
@@ -154,39 +170,48 @@ margin-top:40px;
 
 <div class="article-grid">
 
-<div class="card">
-<img src="https://images.unsplash.com/photo-1677442136019-21780ecad995">
-<div class="card-content">
-<h3>Top AI Productivity Tools</h3>
-<a href="article1.html">Read More →</a>
-</div>
-</div>
+<!-- 20 Articles -->
 
-<div class="card">
-<img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758">
-<div class="card-content">
-<h3>Hidden Chrome Tricks</h3>
-<a href="article2.html">Read More →</a>
-</div>
-</div>
+<div class="card"><img src="https://images.unsplash.com/photo-1677442136019-21780ecad995"><div class="card-content"><h3>Top AI Productivity Tools</h3><a href="article1.html">Read More →</a></div></div>
 
-<div class="card">
-<img src="https://images.unsplash.com/photo-1518779578993-ec3579fee39f">
-<div class="card-content">
-<h3>Secret Android Hacks</h3>
-<a href="article3.html">Read More →</a>
-</div>
-</div>
+<div class="card"><img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758"><div class="card-content"><h3>Hidden Chrome Tricks</h3><a href="article2.html">Read More →</a></div></div>
 
-<div class="card">
-<img src="https://images.unsplash.com/photo-1526378722484-bd91ca387e72">
-<div class="card-content">
-<h3>Making Money Online</h3>
-<a href="article4.html">Read More →</a>
-</div>
-</div>
+<div class="card"><img src="https://images.unsplash.com/photo-1518779578993-ec3579fee39f"><div class="card-content"><h3>Secret Android Hacks</h3><a href="article3.html">Read More →</a></div></div>
 
-<!-- Continue until article20.html -->
+<div class="card"><img src="https://images.unsplash.com/photo-1526378722484-bd91ca387e72"><div class="card-content"><h3>Making Money Online</h3><a href="article4.html">Read More →</a></div></div>
+
+<div class="card"><img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d"><div class="card-content"><h3>AI Tools for Students</h3><a href="article5.html">Read More →</a></div></div>
+
+<div class="card"><img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b"><div class="card-content"><h3>Cybersecurity Tips</h3><a href="article6.html">Read More →</a></div></div>
+
+<div class="card"><img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085"><div class="card-content"><h3>Future Technology 2030</h3><a href="article7.html">Read More →</a></div></div>
+
+<div class="card"><img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee"><div class="card-content"><h3>Social Media Growth</h3><a href="article8.html">Read More →</a></div></div>
+
+<div class="card"><img src="https://images.unsplash.com/photo-1522199710521-72d69614c702"><div class="card-content"><h3>AI Tools for Designers</h3><a href="article9.html">Read More →</a></div></div>
+
+<div class="card"><img src="https://images.unsplash.com/photo-1487014679447-9f8336841d58"><div class="card-content"><h3>Remote Work Setup</h3><a href="article10.html">Read More →</a></div></div>
+
+<div class="card"><img src="https://images.unsplash.com/photo-1550439062-609e1531270e"><div class="card-content"><h3>Best AI Writing Tools</h3><a href="article11.html">Read More →</a></div></div>
+
+<div class="card"><img src="https://images.unsplash.com/photo-1508780709619-79562169bc64"><div class="card-content"><h3>Tech Business Ideas</h3><a href="article12.html">Read More →</a></div></div>
+
+<div class="card"><img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c"><div class="card-content"><h3>Freelancing with AI</h3><a href="article13.html">Read More →</a></div></div>
+
+<div class="card"><img src="https://images.unsplash.com/photo-1492724441997-5dc865305da7"><div class="card-content"><h3>Chatbot Development Guide</h3><a href="article14.html">Read More →</a></div></div>
+
+<div class="card"><img src="https://images.unsplash.com/photo-1499951360447-b19be8fe80f5"><div class="card-content"><h3>Future of Robotics</h3><a href="article15.html">Read More →</a></div></div>
+
+<div class="card"><img src="https://images.unsplash.com/photo-1504805572947-34fad45aed93"><div class="card-content"><h3>Blockchain Explained</h3><a href="article16.html">Read More →</a></div></div>
+
+<div class="card"><img src="https://images.unsplash.com/photo-1555949963-aa79dcee981c"><div class="card-content"><h3>Best Coding Practices</h3><a href="article17.html">Read More →</a></div></div>
+
+<div class="card"><img src="https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7"><div class="card-content"><h3>AI in Healthcare</h3><a href="article18.html">Read More →</a></div></div>
+
+<div class="card"><img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f"><div class="card-content"><h3>Digital Marketing Trends</h3><a href="article19.html">Read More →</a></div></div>
+
+<div class="card"><img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c"><div class="card-content"><h3>Future of Artificial Intelligence</h3><a href="article20.html">Read More →</a></div></div>
+
 </div>
 
 <div class="sidebar">
@@ -197,15 +222,6 @@ margin-top:40px;
 <li><a href="article3.html">Secret Android Hacks</a></li>
 <li><a href="article4.html">Making Money Online</a></li>
 <li><a href="article5.html">AI Tools for Students</a></li>
-</ul>
-
-<h3>Popular Posts</h3>
-<ul>
-<li><a href="article6.html">Cybersecurity Tips</a></li>
-<li><a href="article7.html">Future Technology 2030</a></li>
-<li><a href="article8.html">Social Media Growth</a></li>
-<li><a href="article9.html">AI Tools for Designers</a></li>
-<li><a href="article10.html">Remote Work Setup</a></li>
 </ul>
 </div>
 
